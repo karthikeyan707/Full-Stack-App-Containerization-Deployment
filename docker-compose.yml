@@ -9,7 +9,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: ukarthikeyan/ddtask_backend:latest
     container_name: backend
     restart: always
     ports:
@@ -20,7 +20,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    image: ukarthikeyan/ddtask_frontend:latest
     container_name: frontend
     restart: always
     depends_on:
@@ -39,4 +39,3 @@ services:
 
 volumes:
   mongo-data:
-
