@@ -8,13 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('checkout') {
-            steps {
-                echo 'pull code from github'
-                git branch: 'main', url: 'https://github.com/karthikeyan707/Full-Stack-App-Containerization-Deployment.git'
-            }
-        }
-        
         stage('Build Image') {
             steps {
                 script {
